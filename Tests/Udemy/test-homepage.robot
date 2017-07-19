@@ -18,13 +18,13 @@ Select a parent category Development
 	Homepage.Load
 	Homepage.Select a parent category course using Categories
 
-Select a child category course Web Development
-	[Tags]  Search
+Select a child category course Business > Finance
+	[Tagsude]  Search
 	Homepage.Load
 	Homepage.Select a child category course using Categories
 
 Login to Udemy successfully
 	[Tags]  Smoke
 	Homepage.Load
-	Homepage.Login
+	Homepage.Select login link
 
