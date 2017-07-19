@@ -54,14 +54,14 @@ Following a similar path to the Windows installation, these were additional note
 
 ### Links 
 
-https://www.python.org/downloads/ - Python 2.7
-https://pip.pypa.io/en/stable/installing/ - Install python first then run this file
-https://bangladroid.wordpress.com/2016/11/20/how-to-install-python-pip-selenium-chrome-driver/ - Follow to modify system environment variables + downloading selenium browser drivers
-http://robotframework.org/ - Main site
-https://github.com/robotframework/robotframework - Open source repo
-https://packagecontrol.io/installation#st2 - Package control installer for Sublime 2
-https://github.com/shellderp/sublime-robot-plugin - Install this one
-https://github.com/andriyko/sublime-robot-framework-assistant/wiki/How-to - Steps on using sublime package
-https://packagecontrol.io/packages/SublimeREPL - Resolves issues with new packages
-https://wiki.jenkins.io/display/jenkins/robot+framework+plugin - Plugin to Jenkins
-http://docs.python-requests.org/en/master/user/quickstart/ - API docs for Requests
+* https://www.python.org/downloads/ - Python 2.7
+* https://pip.pypa.io/en/stable/installing/ - Install python first then run this file
+* https://bangladroid.wordpress.com/2016/11/20/how-to-install-python-pip-selenium-chrome-driver/ - Follow to modify system environment variables + downloading selenium browser drivers
+* http://robotframework.org/ - Main site
+* https://github.com/robotframework/robotframework - Open source repo
+* https://packagecontrol.io/installation#st2 - Package control installer for Sublime 2
+* https://github.com/shellderp/sublime-robot-plugin - Install this one
+* https://github.com/andriyko/sublime-robot-framework-assistant/wiki/How-to - Steps on using sublime package
+* https://packagecontrol.io/packages/SublimeREPL - Resolves issues with new packages
+* https://wiki.jenkins.io/display/jenkins/robot+framework+plugin - Plugin to Jenkins
+* http://docs.python-requests.org/en/master/user/quickstart/ - API docs for Requests
