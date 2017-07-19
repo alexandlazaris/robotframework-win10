@@ -19,7 +19,7 @@ Select a parent category Development
 	Homepage.Select a parent category course using Categories
 
 Select a child category course Business > Finance
-	[Tagsude]  Search
+	[Tags]  Search
 	Homepage.Load
 	Homepage.Select a child category course using Categories
 
