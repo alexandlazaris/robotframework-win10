@@ -7,7 +7,7 @@ Load
 	Go To  https://www.udemy.com/courses/
 	Wait Until Page Contains  udemy
 	
-Search for a course using Search Box
+Search and wait for course
 	Input Text  id=q  C#
 	Submit Form  id=searchbox
 	Wait Until Page Contains Element  css=ul.card-wrapper li
@@ -21,5 +21,5 @@ Select a child category course using Categories
 	Mouse Over  css=#dropdownButton div.dropdown__menu > ul > li:nth-child(2)
 	Click Link  /courses/business/finance/
 
-Login
+Select login link
 	Click Link  Login

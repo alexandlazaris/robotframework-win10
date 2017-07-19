@@ -11,19 +11,19 @@ Test Teardown  Common.End test
 Search for a c# course
 	[Tags]  Smoke  Search
 	Homepage.Load
-	Homepage.Search for a course using Search Box
+	Homepage.Search and wait for course
 
-Select a parent category course using Categories
+Select a parent category Development
 	[Tags]  Search
 	Homepage.Load
 	Homepage.Select a parent category course using Categories
 
-Select a child category course using Categories
+Select a child category course Web Development
 	[Tags]  Search
 	Homepage.Load
 	Homepage.Select a child category course using Categories
 
-Login
+Login to Udemy successfully
 	[Tags]  Smoke
 	Homepage.Load
 	Homepage.Login
