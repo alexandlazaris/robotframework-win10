@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170629 13:11:54.274" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\Alex Lazaris\Desktop\Robot\API\Github.robot" id="s1" name="Github">
+<test id="s1-t1" name="Simple REST API call">
+<kw name="Check Github username">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>https://api.github.com</arg>
+</arguments>
+<msg timestamp="20170629 13:11:54.524" level="INFO">Creating Session using : alias=session, url=https://api.github.com, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20170629 13:11:54.524" starttime="20170629 13:11:54.524"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>session</arg>
+<arg>users/alexandlazaris</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20170629 13:11:55.899" level="INFO">Get Request using : alias=session, uri=users/alexandlazaris, headers=None json=None</msg>
+<msg timestamp="20170629 13:11:55.899" level="INFO">C:\Python27\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20170629 13:11:55.901" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20170629 13:11:55.901" starttime="20170629 13:11:54.524"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20170629 13:11:55.903" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20170629 13:11:55.904" starttime="20170629 13:11:55.902"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>${json}</var>
+</assign>
+<msg timestamp="20170629 13:11:55.906" level="INFO">${json} = {u'public_repos': 7, u'site_admin': False, u'subscriptions_url': u'https://api.github.com/users/alexandlazaris/subscriptions', u'gravatar_id': u'', u'hireable': None, u'id': 17981265, u'followers_url'...</msg>
+<status status="PASS" endtime="20170629 13:11:55.906" starttime="20170629 13:11:55.904"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${json}</arg>
+</arguments>
+<msg timestamp="20170629 13:11:55.907" level="INFO">{u'public_repos': 7, u'site_admin': False, u'subscriptions_url': u'https://api.github.com/users/alexandlazaris/subscriptions', u'gravatar_id': u'', u'hireable': None, u'id': 17981265, u'followers_url': u'https://api.github.com/users/alexandlazaris/followers', u'following_url': u'https://api.github.com/users/alexandlazaris/following{/other_user}', u'blog': u'', u'followers': 0, u'location': u'Sydney, Australia', u'type': u'User', u'email': None, u'bio': u'Developer in test. Passionate about all things tech related, web/software development and ... dinosaurs!', u'gists_url': u'https://api.github.com/users/alexandlazaris/gists{/gist_id}', u'company': None, u'events_url': u'https://api.github.com/users/alexandlazaris/events{/privacy}', u'html_url': u'https://github.com/alexandlazaris', u'updated_at': u'2017-06-29T02:18:50Z', u'received_events_url': u'https://api.github.com/users/alexandlazaris/received_events', u'starred_url': u'https://api.github.com/users/alexandlazaris/starred{/owner}{/repo}', u'public_gists': 0, u'name': u'Alexander Lazaris', u'organizations_url': u'https://api.github.com/users/alexandlazaris/orgs', u'url': u'https://api.github.com/users/alexandlazaris', u'created_at': u'2016-03-21T10:49:53Z', u'avatar_url': u'https://avatars3.githubusercontent.com/u/17981265?v=3', u'repos_url': u'https://api.github.com/users/alexandlazaris/repos', u'following': 1, u'login': u'alexandlazaris'}</msg>
+<status status="PASS" endtime="20170629 13:11:55.907" starttime="20170629 13:11:55.906"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${json['login']}</arg>
+<arg>alexandlazaris</arg>
+</arguments>
+<status status="PASS" endtime="20170629 13:11:55.909" starttime="20170629 13:11:55.908"></status>
+</kw>
+<kw name="Begin test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20170629 13:11:55.911" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170629 13:11:59.444" starttime="20170629 13:11:55.910"></status>
+</kw>
+<status status="PASS" endtime="20170629 13:11:59.444" starttime="20170629 13:11:55.910"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>https://github.com/</arg>
+</arguments>
+<msg timestamp="20170629 13:11:59.444" level="INFO">Opening url 'https://github.com/'</msg>
+<status status="PASS" endtime="20170629 13:12:01.881" starttime="20170629 13:11:59.444"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>GitHub</arg>
+</arguments>
+<status status="PASS" endtime="20170629 13:12:01.911" starttime="20170629 13:12:01.881"></status>
+</kw>
+<kw name="End test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170629 13:12:04.966" starttime="20170629 13:12:01.912"></status>
+</kw>
+<status status="PASS" endtime="20170629 13:12:04.967" starttime="20170629 13:12:01.911"></status>
+</kw>
+<status status="PASS" endtime="20170629 13:12:04.968" starttime="20170629 13:11:54.523"></status>
+</kw>
+<status status="PASS" endtime="20170629 13:12:04.969" critical="yes" starttime="20170629 13:11:54.523"></status>
+</test>
+<status status="PASS" endtime="20170629 13:12:04.978" starttime="20170629 13:11:54.277"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Github" pass="1">Github</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
