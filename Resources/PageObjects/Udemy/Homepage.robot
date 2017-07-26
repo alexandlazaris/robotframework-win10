@@ -10,6 +10,11 @@ Load
 Select login link
 	Click Element  css=.dropdown.dropdown--login a
 	Wait Until Page Contains  Login to Your Udemy Account!
+	
+Enter login details
+	[Arguments]  ${email}  ${password}
+	Input Text  css=#id_email  ${email}
+	Input Text  css=#id_password  ${password}
 
 Search and wait for course
 	Input Text  id=q  C#
