@@ -30,6 +30,8 @@ Select Business/Finance
 	Business.Finance.Check text
 
 Login to Udemy successfully
-	[Tags]  Smoke Login
+	[Tags]  Smoke  Login
 	Homepage.Load
 	Homepage.Select login link
+	Homepage.Enter login details  wrongEmail  wrongPassword
+	Common.Click Something  submit-id-submit
