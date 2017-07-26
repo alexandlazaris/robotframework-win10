@@ -29,6 +29,16 @@ The following is a list of links + notes I made during installation and developm
 * Run single test case: ```robot --i tagName Tests/test.robot```
 * Run whole test suite: ```robot -d results Tests```
 * Run single test on ff: Add ```Open Browser  ${BROWSER}``` in file and in CLI use ```robot -i Smoke -v BROWSER:browserName .\Tests\Udemy\test-homepage.robot```. Browsers include ```gc, ff, ie, edge```
+* Run test case with custom parameters, use the following examples:
+```*** Keywords ***
+Enter email 
+	[Arguments]  ${email}
+	Input Text  css=#id_email  ${email}
+
+*** Test Case ***
+Test form
+    Enter email  customEmailParameter
+```
 
 ## Review
 * Minor difficulties to setup, easy to start writing acceptance, e2e and API tests
