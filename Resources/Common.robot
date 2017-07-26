@@ -9,3 +9,7 @@ Begin test
 
 End test
 	Close Browser
+
+Click Something
+  [Arguments]  ${locator}
+  Click Element  id=${locator}
