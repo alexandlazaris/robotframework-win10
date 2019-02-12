@@ -3,20 +3,31 @@ Robot Framework, POM, reports self generated. What more do you need?
 
 ![Jenkins status](/JenkinsBuildReport.png?raw=true "Integration complete")
 
-## Windows 10 - Robot framework - Sublime Text 2
+## Windows 10 - Robot framework
 
-The following is a list of links + notes I made during installation and development. Most will be of use to you :bowtie:
+## Robot Framework
+### Install
+```pip install robot framework``` - https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
+### Additional libraries
+```pip install robotframework-requests``` - https://github.com/bulkan/robotframework-requests
+```pip install robotframework-httplibrary``` - https://github.com/peritus/robotframework-httplibrary
+```pip install robotframework-selenium2library``` - https://github.com/robotframework/Selenium2Library
 
-* Within sublime, use Preferences>Package Control>Install Packages>Robot x (x should = "Framework")
-* To run tests, change Tools>Build System to "robot" 
-* As of latest release, robot framework runs only with Python 2.7
+### Usage
+
+
+### Best practices
 * Use tabs to auto complete statements
 * Ensure double spaces placed within, not tabs
 * Double spaces are vital to running tests
-* Robot selelium actions - http://robotframework.org/Selenium2Library/Selenium2Library.html
-* Can leave current tests as is. Pros are that it's quick to get started. Cons are test log/report can be overloaded with steps for larger test cases
-* Page Object Model and creating common scripts allow you to abstract methods to clean up your robot test file and subsqeuently the test log/report 
-* Auto completion of statements not available in Sublime. Can be tricky when first starting out
+* Selenium keywords - http://robotframework.org/Selenium2Library/Selenium2Library.html
+* Implement design patterns to reduce test file size 
+* Promote abstraction within tests to create modular keywords and variables
+
+### If using Sublime Text 2 :bowtie:
+* Within sublime, use Preferences>Package Control>Install Packages>Robot x (x should = "Framework")
+* To run tests, change Tools>Build System to "robot" 
+* Auto completion of statements is not available in Sublime, tricky for beginner use
 * If error displays due to Python interpreter, go to Robot Framework>Settings and set "python_interpreter": "C:\\Python27\\python.exe",
 * Double spaces after equals, between arguments
 * Single space after Library and test case names 
