@@ -1,1 +1,4 @@
-./Results
+Results
+*.xml
+*.html
+*.log

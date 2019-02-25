@@ -1,10 +1,7 @@
 # robotframework-win10
-Robot Framework, POM, reports self generated. What more do you need? 
-
-![Jenkins status](/JenkinsBuildReport.png?raw=true "Integration complete")
-
 ## Windows 10 - Robot framework
-
+* Download & install Python 3 (Python 2 support stops in 2020)
+* Download & install pip
 ## Robot Framework
 ### Install
 ```pip install robot framework``` - https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
@@ -13,9 +10,7 @@ Robot Framework, POM, reports self generated. What more do you need?
 ```pip install robotframework-httplibrary``` - https://github.com/peritus/robotframework-httplibrary
 ```pip install robotframework-selenium2library``` - https://github.com/robotframework/Selenium2Library
 
-### Usage
-
-
+## Usage
 ### Best practices
 * Use tabs to auto complete statements
 * Ensure double spaces placed within, not tabs
@@ -23,22 +18,17 @@ Robot Framework, POM, reports self generated. What more do you need?
 * Selenium keywords - http://robotframework.org/Selenium2Library/Selenium2Library.html
 * Implement design patterns to reduce test file size 
 * Promote abstraction within tests to create modular keywords and variables
-
-### If using Sublime Text 2 :bowtie:
-* Within sublime, use Preferences>Package Control>Install Packages>Robot x (x should = "Framework")
-* To run tests, change Tools>Build System to "robot" 
-* Auto completion of statements is not available in Sublime, tricky for beginner use
-* If error displays due to Python interpreter, go to Robot Framework>Settings and set "python_interpreter": "C:\\Python27\\python.exe",
 * Double spaces after equals, between arguments
 * Single space after Library and test case names 
 * Add tags to test cases underneath the test case name
 * When testing APIs, will need to register a HTTP certificate on the machine
+
+### Execution
 * Can add in parameters into CLI for test result location, files, suites, tags and more
 * Doesn't run on GitBash CLI. Works on cmd + powershell. 
-* Can sometimes run in Sublime Text, but easier to do from CLI
-* Run single test file: ```robot -d results Tests/Google.robot```
-* Run single test case: ```robot --i tagName Tests/test.robot```
-* Run whole test suite: ```robot -d results Tests```
+* Run single test file: ```robot Tests/test.robot```
+* Run single test case: ```robot -t testCaseName Tests/test.robot```
+* Run whole test suite (based on parent directory): ```robot Tests./```
 * Run single test on ff: Add ```Open Browser  ${BROWSER}``` in file and in CLI use ```robot -i Smoke -v BROWSER:browserName .\Tests\Udemy\test-homepage.robot```. Browsers include ```gc, ff, ie, edge```
 * Run test case with custom parameters, use the following examples:
 ```
@@ -60,19 +50,6 @@ Test form
 * Test cases can become full Resource references
 * Resource keywords end up having same name as test cases
 * No history of tests run. Log + report always replaced with latest
-
-## MacOS
-
-Following a similar path to the Windows installation, these were additional notes/problems encountered.
-
-* Good help: http://testnblog.com/appium-up-running-with-robot-framework/
-* When installing various pip packages, you might encounter errors. This is likely caused by directory permissions. Simply open the parent directory where the error occured and enable read/write permissions
-* For chrome, gecko and I assume other drivers, place them in /usr/local/bin. Link this dir path in ```sudo nano /etc/paths```. Use "/usr/local/bin"
-* Delete contents of .bash_profile if terminal problems exist 
-* In case terminal problems, become a ```root user: (from exe dir)sudo -i```
-* If logs complain about certain keywords, it may be due to having multiple libraries having duplicate keyword names. Remove whichever one you don't need
-* If logs complain about driver/path locations, open ```sudo nano /etc/paths```, add a random change (space + backspace works fine) and save + exit
-* Get list of xcode simulators: ```xcrun simctl list```
 
 ### Links 
 
