@@ -1,7 +1,5 @@
 *** Settings ***
 Library  RequestsLibrary
-Library  HttpLibrary
-
 
 *** Test Cases ***
 Get weather using RequestLibrary

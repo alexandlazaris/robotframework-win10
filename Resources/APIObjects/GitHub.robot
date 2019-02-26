@@ -8,7 +8,6 @@ ${api response to json}
 ${session name}  github
 ${apiUrl}  https://api.github.com
 
-
 *** Keywords ***
 Connect to webservice
 	Create Session  ${session name}  ${apiUrl}

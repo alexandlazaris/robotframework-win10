@@ -15,13 +15,13 @@
 * Use tabs to auto complete statements
 * Ensure double spaces placed within, not tabs
 * Double spaces are vital to running tests
-* Selenium keywords - http://robotframework.org/Selenium2Library/Selenium2Library.html
 * Implement design patterns to reduce test file size 
 * Promote abstraction within tests to create modular keywords and variables
 * Double spaces after equals, between arguments
 * Single space after Library and test case names 
 * Add tags to test cases underneath the test case name
 * When testing APIs, will need to register a HTTP certificate on the machine
+* Ensure browser drivers are up-to date or in-sync with libraries used. If one (e.g. driver) is older than the other(e.g. SeleniumLibrary), some functionality may be impacted
 
 ### Execution
 * Can add in parameters into CLI for test result location, files, suites, tags and more
@@ -64,3 +64,4 @@ Test form
 * https://packagecontrol.io/packages/SublimeREPL - Resolves issues with new packages
 * https://wiki.jenkins.io/display/jenkins/robot+framework+plugin - Plugin to Jenkins
 * http://docs.python-requests.org/en/master/user/quickstart/ - API docs for Requests
+* http://robotframework.org/Selenium2Library/Selenium2Library.html - Selenium library keywords
