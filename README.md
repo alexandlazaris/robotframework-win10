@@ -1,33 +1,34 @@
 # robotframework-win10
-Robot Framework, POM, reports self generated. What more do you need? 
+## Windows 10 - Robot framework
+* Download & install Python 3 (Python 2 support stops in 2020)
+* Download & install pip
+## Robot Framework
+### Install
+```pip install robot framework``` - https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
+### Additional libraries
+```pip install robotframework-requests``` - https://github.com/bulkan/robotframework-requests
+```pip install robotframework-httplibrary``` - https://github.com/peritus/robotframework-httplibrary
+```pip install robotframework-selenium2library``` - https://github.com/robotframework/Selenium2Library
 
-![Jenkins status](/JenkinsBuildReport.png?raw=true "Integration complete")
-
-## Windows 10 - Robot framework - Sublime Text 2
-
-The following is a list of links + notes I made during installation and development. Most will be of use to you :bowtie:
-
-* Within sublime, use Preferences>Package Control>Install Packages>Robot x (x should = "Framework")
-* To run tests, change Tools>Build System to "robot" 
-* As of latest release, robot framework runs only with Python 2.7
+## Usage
+### Best practices
 * Use tabs to auto complete statements
 * Ensure double spaces placed within, not tabs
 * Double spaces are vital to running tests
-* Robot selelium actions - http://robotframework.org/Selenium2Library/Selenium2Library.html
-* Can leave current tests as is. Pros are that it's quick to get started. Cons are test log/report can be overloaded with steps for larger test cases
-* Page Object Model and creating common scripts allow you to abstract methods to clean up your robot test file and subsqeuently the test log/report 
-* Auto completion of statements not available in Sublime. Can be tricky when first starting out
-* If error displays due to Python interpreter, go to Robot Framework>Settings and set "python_interpreter": "C:\\Python27\\python.exe",
+* Implement design patterns to reduce test file size 
+* Promote abstraction within tests to create modular keywords and variables
 * Double spaces after equals, between arguments
 * Single space after Library and test case names 
 * Add tags to test cases underneath the test case name
 * When testing APIs, will need to register a HTTP certificate on the machine
+* Ensure browser drivers are up-to date or in-sync with libraries used. If one (e.g. driver) is older than the other(e.g. SeleniumLibrary), some functionality may be impacted
+
+### Execution
 * Can add in parameters into CLI for test result location, files, suites, tags and more
 * Doesn't run on GitBash CLI. Works on cmd + powershell. 
-* Can sometimes run in Sublime Text, but easier to do from CLI
-* Run single test file: ```robot -d results Tests/Google.robot```
-* Run single test case: ```robot --i tagName Tests/test.robot```
-* Run whole test suite: ```robot -d results Tests```
+* Run single test file: ```robot Tests/test.robot```
+* Run single test case: ```robot -t testCaseName Tests/test.robot```
+* Run whole test suite (based on parent directory): ```robot Tests./```
 * Run single test on ff: Add ```Open Browser  ${BROWSER}``` in file and in CLI use ```robot -i Smoke -v BROWSER:browserName .\Tests\Udemy\test-homepage.robot```. Browsers include ```gc, ff, ie, edge```
 * Run test case with custom parameters, use the following examples:
 ```
@@ -50,19 +51,6 @@ Test form
 * Resource keywords end up having same name as test cases
 * No history of tests run. Log + report always replaced with latest
 
-## MacOS
-
-Following a similar path to the Windows installation, these were additional notes/problems encountered.
-
-* Good help: http://testnblog.com/appium-up-running-with-robot-framework/
-* When installing various pip packages, you might encounter errors. This is likely caused by directory permissions. Simply open the parent directory where the error occured and enable read/write permissions
-* For chrome, gecko and I assume other drivers, place them in /usr/local/bin. Link this dir path in ```sudo nano /etc/paths```. Use "/usr/local/bin"
-* Delete contents of .bash_profile if terminal problems exist 
-* In case terminal problems, become a ```root user: (from exe dir)sudo -i```
-* If logs complain about certain keywords, it may be due to having multiple libraries having duplicate keyword names. Remove whichever one you don't need
-* If logs complain about driver/path locations, open ```sudo nano /etc/paths```, add a random change (space + backspace works fine) and save + exit
-* Get list of xcode simulators: ```xcrun simctl list```
-
 ### Links 
 
 * https://www.python.org/downloads/ - Python 2.7
@@ -76,3 +64,4 @@ Following a similar path to the Windows installation, these were additional note
 * https://packagecontrol.io/packages/SublimeREPL - Resolves issues with new packages
 * https://wiki.jenkins.io/display/jenkins/robot+framework+plugin - Plugin to Jenkins
 * http://docs.python-requests.org/en/master/user/quickstart/ - API docs for Requests
+* http://robotframework.org/Selenium2Library/Selenium2Library.html - Selenium library keywords
