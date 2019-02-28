@@ -7,8 +7,13 @@
 ```pip install robot framework``` - https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
 ### Additional libraries
 ```pip install robotframework-requests``` - https://github.com/bulkan/robotframework-requests
+
 ```pip install robotframework-httplibrary``` - https://github.com/peritus/robotframework-httplibrary
+
 ```pip install robotframework-selenium2library``` - https://github.com/robotframework/Selenium2Library
+
+### Mobile
+Using appium to run mobile tests.
 
 ## Usage
 ### Best practices
@@ -65,3 +70,4 @@ Test form
 * https://wiki.jenkins.io/display/jenkins/robot+framework+plugin - Plugin to Jenkins
 * http://docs.python-requests.org/en/master/user/quickstart/ - API docs for Requests
 * http://robotframework.org/Selenium2Library/Selenium2Library.html - Selenium library keywords
+* http://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html#Switch%20Application - Appium keywords
