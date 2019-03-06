@@ -12,8 +12,23 @@
 
 ```pip install robotframework-selenium2library``` - https://github.com/robotframework/Selenium2Library
 
+```pip install robotframework-appiumlibrary``` - https://github.com/serhatbolsu/robotframework-appiumlibrary
+
 ### Mobile
-Using appium to run mobile tests.
+
+Using appium to run mobile tests with Robot Framework.
+
+### Android + Windows 10 ONLY
+
+* Tests can be run over wifi to a device (must be on same network) or via USB debugging: https://blog.usejournal.com/run-your-appium-tests-on-real-devices-over-wifi-d70b7e7f6aeb
+* To inspect:
+	* Using appium desktop, start a server
+	* Start a new session with capabiltities for an emulator or physical device (same as test capabilities)
+	* Starg session
+* Loading an app
+	* If it's not installed, include ```app=fullPathToApk``` + ```fullReset``` capabilites
+	* If it's already installed, find fill out the respective values for ```appActivity``` & ```appPackage``` (check appium server logs if unsure)
+
 
 ## Usage
 ### Best practices
@@ -71,3 +86,4 @@ Test form
 * http://docs.python-requests.org/en/master/user/quickstart/ - API docs for Requests
 * http://robotframework.org/Selenium2Library/Selenium2Library.html - Selenium library keywords
 * http://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html#Switch%20Application - Appium keywords
+* https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md - Appium capabilities
