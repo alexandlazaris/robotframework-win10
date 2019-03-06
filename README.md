@@ -31,6 +31,23 @@ Using appium to run mobile tests with Robot Framework.
 
 
 ## Usage
+### Test architecture
+### POM
+* Screens are stored as separate files, with variables and methods created to represent actions on that specific screen
+* This method of creating 'Page Objects' can be used for APIs, Web UIs and Mobile UI
+* No assertions on content or data, unless required
+* The tests themselves utilize the Page Object methods as test steps, using assertions as part of the test cases based on available Page Object data
+
+### KDD
+* Keywords wrap methods and code, allowing user-friendly tests instructions to be used instead
+* Assists in debugging, troubleshooting and test reports
+* Useful when involving people with minimal coding & test automation experience to create test case
+
+### BDD
+* Adds a simpler plain English abstraction layer over test code, abstracting keywords even more
+* This can lead to over-abstraction. Essentially, covering code with so many layers its now become more difficult to update methods or add new code
+* Useful when involving people with basic, if any, coding & test automation experience to create or review test cases
+
 ### Best practices
 * Use tabs to auto complete statements
 * Ensure double spaces placed within, not tabs
@@ -63,13 +80,14 @@ Test form
 ```
 
 ## Review
-* Minor difficulties to setup, easy to start writing acceptance, e2e and API tests
+* Easy to start writing acceptance, e2e and API tests
+* Mobile requires external software + hardware, additional steps required before test creation
 * Can easily be integrated into build servers such as Jenkins 
 * Single log + report pages for each test suite, can keep refreshing page OR read in XML report data into another system (charts)
 * Seems like extra work to wrap already wrapped keywords. Must be consistent across all various keywords used (there are many variations of a similar action)
 * Test cases can become full Resource references
 * Resource keywords end up having same name as test cases
-* No history of tests run. Log + report always replaced with latest
+* No history of tests run by default, as the Log + Report files are always replaced with latest
 
 ### Links 
 

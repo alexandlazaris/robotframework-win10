@@ -10,7 +10,6 @@ Suite Setup  Open Application  http://localhost:4723/wd/hub
              ...  appPackage=io.appium.android.apis
              ...  automationName=Appium
              ...  printPageSourceOnFindFailure=true
-            #  ...  fullReset=true
 Suite Teardown  Quit Application
              
 *** Keywords ***
