@@ -22,7 +22,6 @@ Click a search result link
 	Click Element  css=${SEARCH RESULT LINK}
 
 Check new page contains search text
-	Click Element  css=${SEARCH RESULT LINK}
 	Wait Until Page Contains  ${SEARCH TERM}
 
 Check search links contain text
