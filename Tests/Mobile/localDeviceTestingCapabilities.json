@@ -1,8 +1,0 @@
-{
-    "platformName": "Android",
-    "platformVersion": "8",
-    "deviceName": "Pixel",
-    "deviceId" : "192.168.1.110:5555",
-    "automationName": "Appium",
-    "app": "C:/Users/Alex Lazaris/Desktop/appium-nodejs/ApiDemos-debug.apk"
-}
