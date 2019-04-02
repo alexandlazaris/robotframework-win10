@@ -48,6 +48,12 @@ Using appium to run mobile tests with Robot Framework.
 * This can lead to over-abstraction. Essentially, covering code with so many layers its now become more difficult to update methods or add new code
 * Useful when involving people with basic, if any, coding & test automation experience to create or review test cases
 
+### Data-driven
+* Read in data (inputs, values, urls) form an Excel sheet using http://navinet.github.io/robotframework-excellibrary/
+* Keywords read/write Excel file in http://navinet.github.io/robotframework-excellibrary/ExcelLibrary-KeywordDocumentation.html
+	
+
+
 ### Best practices
 * Use tabs to auto complete statements
 * Ensure double spaces placed within, not tabs
