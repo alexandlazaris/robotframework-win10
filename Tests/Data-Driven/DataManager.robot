@@ -18,9 +18,9 @@ Read in Test Data
     Read in Page Title
 
 Read in URL
-    ${url} =  Set Variable  ${data}[1][0]
+    ${url} =  Set Variable  ${data}[0][0]
     Set Test Variable  ${url}
 
 Read in Page Title
-    ${pageTitle} =  Set Variable  ${data}[1][1]
+    ${pageTitle} =  Set Variable  ${data}[0][1]
 	Set Test Variable  ${pageTitle}
