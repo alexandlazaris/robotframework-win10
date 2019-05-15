@@ -1,0 +1,6 @@
+Results
+Screenshots
+*.xml
+*.html
+*.log
+.vscode
